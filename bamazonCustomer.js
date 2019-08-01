@@ -8,7 +8,7 @@ var dbConnect = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "",
+  password: "root",
   database: "bamazon"
 });
 
@@ -40,3 +40,25 @@ var productDisplay = function() {
 };
 
 // prompt for quantity and purchase
+function promptPurchase() {
+  inquirer
+    .prompt([
+      {
+        name: "Id",
+        type: "input",
+        message: "Please enter the Id of the item you wish to purchase.",
+        filter: Number
+      },
+      {
+        name: "Quantity",
+        type: "input",
+        message: "How many would you like to purchase, today?",
+        filter: Number
+      }
+    ])
+    .then(function(answers) {
+      var requestedId = answers.Id;
+      var quantityNeed = answers.Quantity;
+      purchase(requestedId, quantityNeed);
+    });
+}
