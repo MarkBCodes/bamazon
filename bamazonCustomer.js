@@ -23,13 +23,7 @@ var productDisplay = function() {
   dbConnect.query(query, function(err, res) {
     if (err) throw err;
     var tableDisplay = new Table({
-      head: [
-        "item_id",
-        "product_name",
-        "department_name",
-        "price",
-        "stock_quantity"
-      ],
+      head: ["Item ID", "Product Name", "Catergory", "Price", "Quantity"],
       colWidths: [10, 25, 25, 10, 14]
     });
     for (var i = 0; i < res.length; i++) {
@@ -69,3 +63,22 @@ function purchasePrompt() {
       purchase(requestedId, quantityNeed);
     });
 }
+
+//  handles purchasing; informs user of items in stock/out of stock
+function purchase(Id, amount){
+    connection.query("SELECT * FROM products WHERE item_id= " + Id, function(err, res){
+        if(err){console.log(err)};
+        if(amount <= res[0].stock_quantity){
+            var total = res[0].price * amount;
+            console.log("Your order is in stock!");
+            console.log("The total amount due " + amount + " " + res[0].product_name + "is" + total);
+
+            connection.query("UPDATE products SET stock_quantity = stock_quantity - " + amount +"WHERE item_id = " + Id);
+        } else {
+            console.log("I'm sorry, we do not have enough " + res[0].product_name + "to complete your order.");
+        };
+        productDisplay();
+    });
+};
+
+productDisplay();
