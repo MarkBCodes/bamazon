@@ -22,7 +22,13 @@ var productDisplay = function() {
   dbConnect.query(query, function(err, res) {
     if (err) throw err;
     var tableDisplay = new Table({
-      head: ["Item Id", "Product Name", "Category", "Price", "Quantity"],
+      head: [
+        "item_id",
+        "product_name",
+        "department_name",
+        "price",
+        "stock_quantity"
+      ],
       colWidths: [10, 25, 25, 10, 14]
     });
     for (var i = 0; i < res.length; i++) {
@@ -40,7 +46,7 @@ var productDisplay = function() {
 };
 
 // prompt for quantity and purchase
-function promptPurchase() {
+function purchasePrompt() {
   inquirer
     .prompt([
       {
