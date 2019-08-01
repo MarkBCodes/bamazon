@@ -1,10 +1,10 @@
 // getting dependencies
-var inquirer = require("inquirer");
 var mysql = require("mysql");
+var inquirer = require("inquirer");
 var Table = require("cli-table");
 
 // connection setup and displayed response, once connected
-var dbConnect = mysql.createConnection({
+var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
@@ -12,9 +12,14 @@ var dbConnect = mysql.createConnection({
   database: "bamazon"
 });
 
-dbConnect.connect(function(err) {
+connection.connect(function(err) {
   if (err) throw err;
-  console.log("connected as id " + dbConnect.threadId);
+  console.log("connected as id" + connection.threadId);
+});
+
+connection.connect(function(err) {
+  if (err) throw err;
+  console.log("connected as id " + connection.threadId);
 });
 // product display
 var productDisplay = function() {
