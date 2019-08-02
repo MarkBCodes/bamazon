@@ -95,7 +95,7 @@ function purchase(Id, amount) {
       console.log(
         "I'm sorry, we do not have enough " +
           res[0].product_name +
-          "to complete your order."
+          " to complete your order."
       );
     }
     productDisplay();
