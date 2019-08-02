@@ -89,8 +89,7 @@ function purchase(Id, amount) {
         "UPDATE products SET stock_quantity = stock_quantity - " +
           amount +
           "WHERE item_id = " +
-          Id +
-          ";"
+          Id
       );
     } else {
       console.log(
