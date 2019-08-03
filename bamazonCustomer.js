@@ -88,7 +88,7 @@ function purchase(Id, amount) {
       connection.query(
         "UPDATE products SET stock_quantity = stock_quantity - " +
           amount +
-          "WHERE item_id = " +
+          " WHERE item_id = " +
           Id
       );
     } else {
