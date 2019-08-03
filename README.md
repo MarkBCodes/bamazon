@@ -28,4 +28,4 @@ Though it is not fully shown, below the table the user is prompted with a statem
 ![Too Much!](https://github.com/Gudbrandr42/bamazon/blob/master/Images/TooMuch.PNG)
 
 When a user gives the application an order size that meets within the allotted amount, the user will receive a message that the amount is in stock and then given the amount due. Then the application resets the table with the updated amount.  See here for a visual example:
-![succesful order}(https://github.com/Gudbrandr42/bamazon/blob/master/Images/order%20result.PNG)
+![succesful order](https://github.com/Gudbrandr42/bamazon/blob/master/Images/order%20result.PNG)
