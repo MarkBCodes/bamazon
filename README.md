@@ -29,3 +29,6 @@ Though it is not fully shown, below the table the user is prompted with a statem
 
 When a user gives the application an order size that meets within the allotted amount, the user will receive a message that the amount is in stock and then given the amount due. Then the application resets the table with the updated amount.  See here for a visual example:
 ![succesful order](https://github.com/Gudbrandr42/bamazon/blob/master/Images/order%20result.PNG)
+
+a Buyout of products also proves that you can order up to the limited number without getting an error or a message saying there is not enough:
+![buyout](https://github.com/Gudbrandr42/bamazon/blob/master/Images/buyout.PNG)
