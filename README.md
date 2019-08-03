@@ -27,8 +27,5 @@ After hitting enter, the interface looks like this:
 Though it is not fully shown, below the table the user is prompted with a statement and then a question.  The first is obtain the item_id number of the product they wish to purchase.  The follow-up is a question that is requesting the amount they wish to purchase. If the user requests more than what is alloted, the return response informs the user that they have requested more than is available and the application resets to the table and the initial prompt:
 ![Too Much!](https://github.com/Gudbrandr42/bamazon/blob/master/Images/TooMuch.PNG)
 
-*Note any typos seen have been fixed and the images will eventually be updated
-
-When a customer requests an amount below the alloted amount, the user is presented with a message that says we have it in stock and is given a price that matches the amount the user owes for the cost of the item(s) they are wishing to purchase. 
-
-And that's it! More updates to come, eventually. Thanks for reviewing over my project.
+When a user gives the application an order size that meets within the allotted amount, the user will receive a message that the amount is in stock and then given the amount due. Then the application resets the table with the updated amount.  See here for a visual example:
+![succesful order}(https://github.com/Gudbrandr42/bamazon/blob/master/Images/order%20result.PNG)
