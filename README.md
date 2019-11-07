@@ -2,6 +2,8 @@
 
 ## Demo
 
+Below, you'll see how the app works, please read further for a breakdown of what's going on.
+
 ![](./images/demo.gif)
 
 ## Overview
