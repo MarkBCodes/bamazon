@@ -2,7 +2,7 @@
 
 ## Demo
 
-![](demo.gif)
+![](./images/demo.gif)
 
 ## Overview
 
